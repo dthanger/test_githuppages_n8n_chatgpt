@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: n8n Webhook Client
+  version: 1.0.0
+  description: Send messages to an n8n workflow via webhook.
+servers:
+  - url: https://smartcitystudio.app.n8n.cloud
+paths:
+  /webhook/chatgpt-client:
+    post:
+      operationId: sendMessage
+      summary: Send a message to the n8n webhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                  description: Message to be sent to the n8n workflow
+      responses:
+        '200':
+          description: Successful message forwarding
+          content:
+            application/json:
+              schema:
+                type: object
