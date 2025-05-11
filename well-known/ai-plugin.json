@@ -1,1 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "n8n Webhook Client",
+  "name_for_model": "n8nWebhook",
+  "description_for_human": "Send user messages to n8n workflows via webhook.",
+  "description_for_model": "Use this tool to send a message string to an n8n webhook for further processing.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://dthanger.io/n8n-webhook-plugin/openapi.yaml"
+  },
+}
 
